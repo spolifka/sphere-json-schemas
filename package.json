@@ -17,7 +17,8 @@
     "schema"
   ],
   "dependencies": {
-    "jsonschema": "1.0.0"
+    "jsonschema": "1.0.0",
+    "jslint": "0.8.0"
   },
   "devDependencies": { },
   "preferGlobal": true,
