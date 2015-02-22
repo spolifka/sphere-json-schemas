@@ -1,6 +1,6 @@
 {
   "inventory": [
-    { 
+    {
       "sku": "123",
       "quantity": 7,
       "channel": {
