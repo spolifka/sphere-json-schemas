@@ -1,0 +1,25 @@
+{
+  "title": "SPHERE.IO stock schema",
+  "type": "object",
+  "properties": {
+    "total": {
+      "type": "integer"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "object",
+            "patternProperties": {
+              "^([a-z]){2}$": {}
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    }
+  },
+  "required": ["categories"]
+}
