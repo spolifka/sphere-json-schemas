@@ -1,0 +1,26 @@
+{
+  "name": "sphere-impex-json-schemas",
+  "version": "0.0.1",
+  "description": "An example module to illustrate the usage of a package.json",
+  "author": "Hajo Eichler <hajo.eichler@commercetools.de>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hajoeichler/sphere-impex-json-schemas"
+  },
+  "bugs": {
+    "url": "https://github.com/hajoeichler/sphere-impex-json-schemas/issues"
+  },
+  "keywords": [
+    "SPHERE.IO",
+    "import",
+    "JSON",
+    "schema"
+  ],
+  "dependencies": {
+    "jsonschema": "1.0.0"
+  },
+  "devDependencies": { },
+  "preferGlobal": true,
+  "private": true,
+  "license": "MIT"
+}
