@@ -20,8 +20,8 @@ for (var i = 0; i < types.length; i++) {
     console.warn('No files found in directory: ' + targetDir);
   }
   for (var j = 0; j < examples.length; j++) {
-  	var exampleFileName = currentDir + '/examples/' + type + '/' + examples[j];
-  	console.log('Reading example: ' + exampleFileName);
+    var exampleFileName = currentDir + '/examples/' + type + '/' + examples[j];
+    console.log('Reading example: ' + exampleFileName);
     var example = require('' + exampleFileName);
 
     // validate example against schema
