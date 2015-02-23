@@ -1,8 +1,7 @@
 ---
 language: node_js
 node_js:
+- 0.10
 - 0.12
 script:
-- node validate-examples.js
-- ./node_modules/jslint/bin/jslint.js schema/*.json
-- ./node_modules/jslint/bin/jslint.js examples/*/*.json
+- npm test

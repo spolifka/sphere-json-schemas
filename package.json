@@ -1,7 +1,7 @@
 {
   "name": "sphere-impex-json-schemas",
   "version": "0.0.1",
-  "description": "An example module to illustrate the usage of a package.json",
+  "description": "A collection of JSON schemas to validate SPHERE.IO API resources.",
   "author": "Hajo Eichler <hajo.eichler@commercetools.de>",
   "repository": {
     "type": "git",
@@ -14,14 +14,17 @@
     "SPHERE.IO",
     "import",
     "JSON",
-    "schema"
+    "schema",
+    "validation"
   ],
+  "scripts": {
+    "test": "jslint **/*.json && node validate-examples.js"
+  },
   "dependencies": {
     "jsonschema": "1.0.0",
     "jslint": "0.8.0"
   },
   "devDependencies": { },
-  "preferGlobal": true,
   "private": true,
   "license": "MIT"
 }

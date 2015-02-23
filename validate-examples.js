@@ -1,32 +1,36 @@
 var fs = require('fs');
 var Validator = require('jsonschema').Validator;
-
 var val = new Validator();
-var instance = 4;
+var currentDir = __dirname;
 
-types = fs.readdirSync('examples');
+var types = fs.readdirSync(currentDir + '/examples');
 
-for (i = 0; i < types.length; i++) {
+// TODO: add verbose / quite options
+for (var i = 0; i < types.length; i++) {
   type = types[i];
-  examples = fs.readdirSync('examples/' + type);
+  // read schema definition
+  var schemaFileName = currentDir + '/schema/' + type + '.schema.json';
+  console.log('Reading schema: ' + schemaFileName);
+  var schema = require('' + schemaFileName);
 
-  schemaFile = 'schema/' + type + '.schema.json';
-  console.log('Reading schema: ' + schemaFile);
-  s = fs.readFileSync(schemaFile).toString();
-  console.log('Parsing schema: ', s);
-  schema = JSON.parse(s);
+  // read examples related to current schema
+  var targetDir = currentDir + '/examples/' + type;
+  var examples = fs.readdirSync(targetDir);
+  if (!examples) {
+    console.warn('No files found in directory: ' + targetDir);
+  }
+  for (var j = 0; j < examples.length; j++) {
+  	var exampleFileName = currentDir + '/examples/' + type + '/' + examples[j];
+  	console.log('Reading example: ' + exampleFileName);
+    var example = require('' + exampleFileName);
 
-  for (j = 0; j < examples.length; j++) {
-  	exampleFile = 'examples/' + type + '/' + examples[j];
-  	console.log('Reading example: ' + exampleFile);
-    e = fs.readFileSync(exampleFile).toString();
-    console.log('Parsing example: ', e);
-    example = JSON.parse(e);
-
+    // validate example against schema
     result = val.validate(example, schema);
     if (result.errors.length > 0) {
       console.error('Validation FAILED: ', result.errors);
       process.exit(1);
+    } else {
+      console.log('Ok');
     }
   }
 }
