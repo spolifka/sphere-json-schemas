@@ -26,13 +26,13 @@
   "definitions": {
     "localizedString": {
       "type": "object",
-      "properties": {
-        "patternProperties": {
-          "^([a-z]){2}$": {
-            "type": "string"
-          }
+      "patternProperties": {
+        "^([a-z]){2}$": {
+          "type": "string"
         }
-      }
+      },
+      "properties": {},
+      "additionalProperties": false
     }
   }
 }
