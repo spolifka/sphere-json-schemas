@@ -1,4 +1,5 @@
 {
+  "$schema": "http://json-schema.org/schema#",
   "title": "SPHERE.IO stock schema",
   "type": "object",
   "properties": {
@@ -11,17 +12,27 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "object",
-            "patternProperties": {
-              "^([a-z]){2}$": {
-                "type": "string"
-              }
-            },
-            "additionalProperties": false
+            "$ref": "#/definitions/localizedString"
+          },
+          "slug": {
+            "$ref": "#/definitions/localizedString"
+          }
+        },
+        "required": ["name", "slug"]
+      }
+    }
+  },
+  "required": ["categories"],
+  "definitions": {
+    "localizedString": {
+      "type": "object",
+      "properties": {
+        "patternProperties": {
+          "^([a-z]){2}$": {
+            "type": "string"
           }
         }
       }
     }
-  },
-  "required": ["categories"]
+  }
 }

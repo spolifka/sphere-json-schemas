@@ -4,6 +4,9 @@
     {
       "name": {
         "en": "root category"
+      },
+      "slug": {
+        "en": "root-category"
       }
     }
   ]
