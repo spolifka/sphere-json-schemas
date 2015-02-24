@@ -11,11 +11,20 @@
       "items": {
         "type": "object",
         "properties": {
+          "externalId": {
+            "type": "string"
+          },
           "name": {
             "$ref": "#/definitions/localizedString"
           },
           "slug": {
             "$ref": "#/definitions/localizedString"
+          },
+          "description": {
+            "$ref": "#/definitions/localizedString"
+          },
+          "orderHint": {
+            "type": "string"
           }
         },
         "required": ["name", "slug"]
