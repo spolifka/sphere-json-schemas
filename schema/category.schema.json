@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "title": "SPHERE.IO stock schema",
+  "title": "SPHERE.IO category schema",
   "type": "object",
   "properties": {
     "total": {
