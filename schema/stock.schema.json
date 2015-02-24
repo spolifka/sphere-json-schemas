@@ -10,6 +10,9 @@
       "items": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string"
+          },
           "sku": {
             "type": "string"
           },
