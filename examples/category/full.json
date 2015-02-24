@@ -1,0 +1,21 @@
+{
+  "total": 1,
+  "categories": [
+    {
+      "externalId": "123",
+      "name": {
+        "en": "root category",
+        "de": "Wurzel Konten"
+      },
+      "slug": {
+        "en": "root-category",
+        "de": "wurzel-konten"
+      },
+      "description": {
+        "en": "Foo Bar\nMultiline",
+        "de": "Mehrzeilig\nBla Bla"
+      },
+      "orderHint": "0.5"
+    }
+  ]
+}
