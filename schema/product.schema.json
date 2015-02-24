@@ -1,0 +1,25 @@
+{
+  "title": "SPHERE.IO product schema",
+  "type": "object",
+  "properties": {
+    "total": {
+      "type": "integer"
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "$ref": "/ltext"
+          }
+        },
+        "required": ["name"]
+      }
+    }
+  },
+  "required": ["products"]
+}
