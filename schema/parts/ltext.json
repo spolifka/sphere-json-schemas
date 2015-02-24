@@ -1,0 +1,11 @@
+{
+  "id": "/ltext",
+  "type": "object",
+  "patternProperties": {
+    "^([a-z]){2}$": {
+      "type": "string"
+    }
+  },
+  "properties": {},
+  "additionalProperties": false
+}

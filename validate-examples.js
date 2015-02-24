@@ -3,6 +3,10 @@ var Validator = require('jsonschema').Validator;
 var val = new Validator();
 var currentDir = __dirname;
 
+var ltextFileName = currentDir + '/schema/parts/ltext.json';
+var ltext = require('' + ltextFileName);
+val.addSchema(ltext)
+
 var types = fs.readdirSync(currentDir + '/examples');
 
 // TODO: add verbose / quite options

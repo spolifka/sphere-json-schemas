@@ -1,5 +1,4 @@
 {
-  "$schema": "http://json-schema.org/schema#",
   "title": "SPHERE.IO category schema",
   "type": "object",
   "properties": {
@@ -15,13 +14,13 @@
             "type": "string"
           },
           "name": {
-            "$ref": "#/definitions/localizedString"
+            "$ref": "/ltext"
           },
           "slug": {
-            "$ref": "#/definitions/localizedString"
+            "$ref": "/ltext"
           },
           "description": {
-            "$ref": "#/definitions/localizedString"
+            "$ref": "/ltext"
           },
           "orderHint": {
             "type": "string"
@@ -31,17 +30,5 @@
       }
     }
   },
-  "required": ["categories"],
-  "definitions": {
-    "localizedString": {
-      "type": "object",
-      "patternProperties": {
-        "^([a-z]){2}$": {
-          "type": "string"
-        }
-      },
-      "properties": {},
-      "additionalProperties": false
-    }
-  }
+  "required": ["categories"]
 }
