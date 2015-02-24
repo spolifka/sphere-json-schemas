@@ -24,6 +24,9 @@
           },
           "orderHint": {
             "type": "string"
+          },
+          "parentId": {
+            "type": "string"
           }
         },
         "required": ["name", "slug"]
