@@ -1,6 +1,6 @@
 # sphere-json-schemas
 
-[![Build Status](https://travis-ci.org/hajoeichler/sphere-impex-json-schemas.svg?branch=master)](https://travis-ci.org/hajoeichler/sphere-impex-json-schemas)
+[![Build Status](https://travis-ci.org/hajoeichler/sphere-json-schemas.svg?branch=master)](https://travis-ci.org/hajoeichler/sphere-json-schemas)
 
 This repository contains a set of [JSON schemas](http://json-schema.org/) used as standard data format for importing and updating your ecommerce data in your SPHERE.IO project.
 
