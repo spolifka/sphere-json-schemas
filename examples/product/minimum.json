@@ -3,7 +3,10 @@
     {
       "name": {
         "en": "My Product"
-      }
+      },
+      "variants": [
+        { "sku": "123" }
+      ]
     }
   ]
 }

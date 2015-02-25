@@ -15,9 +15,44 @@
           },
           "name": {
             "$ref": "/ltext"
+          },
+          "slug": {
+            "$ref": "/ltext"
+          },
+          "variants": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "sku": {
+                  "type": "string"
+                },
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                    }
+                  }
+                },
+                "attributes": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                    }
+                  }
+                }
+              },
+              "required": ["sku"]
+            }
           }
         },
-        "required": ["name"]
+        "required": ["name", "variants"]
       }
     }
   },
