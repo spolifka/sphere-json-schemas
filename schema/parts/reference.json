@@ -1,0 +1,8 @@
+{
+  "id": "/reference",
+  "type": "object",
+  "properties": {
+    "id": "string"
+  },
+  "additionalProperties": false
+}

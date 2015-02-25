@@ -7,6 +7,10 @@ var ltextFileName = currentDir + '/schema/parts/ltext.json';
 var ltext = require('' + ltextFileName);
 val.addSchema(ltext)
 
+var referenceFileName = currentDir + '/schema/parts/reference.json';
+var reference = require('' + referenceFileName);
+val.addSchema(reference)
+
 var types = fs.readdirSync(currentDir + '/examples');
 
 // TODO: add verbose / quite options
