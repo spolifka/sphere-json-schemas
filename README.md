@@ -12,3 +12,24 @@ To run those validation, please ensure you have nodejs installed (version 0.10 o
 npm install
 npm test
 ```
+
+### Feedback during processing
+
+We are providing those JSON schemas in order to use stream processing while talking to the SPHERE.IO API. Thus, we don't know what the actuall amount of the data is which we process. In order to provide feedback during processing about the current status, we recommend to fill the `total` with the right number. We assume that the value is equal to the length of the array.
+
+```JavaScript
+{
+  "total": 3
+  "categories": [
+    { ... },
+    { ... },
+    { ... }
+  ]
+}
+```
+
+### Minimum required values vs API requirements
+
+Some proprties defined in the JSON schema are optional whereas the same property in the API is required. One example is the `slug` of categories. If the `slug` isn't provided the importer will generate a slug using a `slugify` method while ensuring that all slugs will be unique.
+
+On the other hand, the `sku` of variants is required in the JSON schema. The `sku` is a crutial identifier to link a variant to its inventory as well as pricing information.
