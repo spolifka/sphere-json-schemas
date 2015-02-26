@@ -33,7 +33,7 @@
               "properties": {
                 "id": {
                   "type": "integer",
-                  "min": 1
+                  "minimum": 1
                 },
                 "sku": {
                   "type": "string"
