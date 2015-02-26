@@ -1,0 +1,33 @@
+{
+  "total": 1,
+  "products": [
+    {
+      "name": {
+        "en": "My Product"
+      },
+      "variants": [
+        {
+          "id": 1,
+          "sku": "123",
+          "attributes": [
+            {
+              "name": "bar",
+              "value": "foo"
+            }
+          ],
+          "images": []
+        },
+        {
+          "id": 7,
+          "sku": "345",
+          "attributes": [
+            {
+              "name": "bar",
+              "value": "foo"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
