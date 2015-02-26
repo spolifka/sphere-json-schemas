@@ -43,7 +43,11 @@
                   "items": {
                     "type": "object",
                     "properties": {
-                    }
+                      "url": {
+                        "type": "string"
+                      }
+                    },
+                    "required": ["url"]
                   }
                 },
                 "attributes": {
@@ -51,7 +55,13 @@
                   "items": {
                     "type": "object",
                     "properties": {
-                    }
+                      "name": {
+                        "type": "string"
+                      },
+                      "value": { }
+                    },
+                    "additionalProperties": false,
+                    "required": ["name"]
                   }
                 }
               },
